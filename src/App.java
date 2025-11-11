@@ -1,14 +1,16 @@
+
 /**
  * You are going to write code that is designed to store student ID numbers.
  * You will create an ArrayList for Integers, then accept user input to add values 
  * to that ArrayList. There will be additional modifications you can make:
  * 
  * B level:
- * Accept input from users, add values to an ArrayList
+ * Accept input from users, add values to an ArrayList (done)
  * 
  * B+ level:
- * B level plus stop accepting input when the user enters -1. After this, the full
- * list of student numbers should be printed, one student ID per line.
+ * B level plus stop accepting input when the user enters -1. (done)
+ * After this, the full
+ * list of student numbers should be printed, one student ID per line. (done)
  * 
  * A- level: 
  * Complete B and B+. Also do not allow duplicates. When the user enters a student ID 
@@ -24,8 +26,34 @@
  */
 
 import java.util.*;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner reader = new Scanner(System.in);
+        ArrayList<Integer> values = new ArrayList<>();
+      
+
+        while (true) {
+            System.out.println("Give me a value: ");
+            int input = Integer.valueOf(reader.nextLine());
+
+            if (input == -1) {
+                break;
+            }   
+            values.add(input);
+        }
+       
+        //boolean found = values.contains (input);
+        for (int ID : values) {
+            System.out.println(ID);
+            }
+           // if (found) {
+                //System.out.println("Cannot add duplicates ");
+             //   continue;
+          //  }else {
+          //     continue;
+          //  }
+        }
     }
-}
+
+
